@@ -1,0 +1,145 @@
+:root {
+  --border-radius: 16px;
+  --height: 50vh;
+  --font-size: 40px;
+  --width: 50vw;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  transition: all 0.4s;
+}
+
+header{
+  
+  text-align: center;
+  padding: 20px;
+  font-size:40px;
+}
+
+.Stripe-container {
+  display: flex;
+  width: var(--width);
+  height: var(--height);
+  border-radius: var(--border-radius);
+  background-color: black;
+  box-shadow: 0 6px 15px rgb(0, 0, 0, 0.4);
+  
+}
+
+.Stripe-container:hover {
+  box-shadow: 0 6px 15px rgb(0, 0, 0, 0.6);
+  
+}
+
+.Stripe-container:hover .before-pc {
+  opacity: 0;
+}
+
+.box {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.text {
+  color: rgb(201, 201, 201);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 550;
+  opacity: 0;
+  font-size: 200px;
+}
+
+.after {
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+  font-size: var(--font-size);
+  opacity: 0;
+  font-size: 0;
+}
+
+.stripe:hover {
+  width: 180%;
+  
+  
+  .after {
+    opacity: 1;
+    font-size: var(--font-size);
+  }
+}
+
+.stripe {
+  height: var(--height);
+  width: 20%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.stripe:nth-child(even) {
+  background: #fff;
+  
+}
+
+.stripe:nth-child(odd) {
+  background: #de5246;
+}
+
+.Stripe-container .stripe:first-child {
+  border-bottom-left-radius: var(--border-radius);
+  border-top-left-radius: var(--border-radius);
+}
+
+.Stripe-container .stripe:last-child {
+  border-bottom-right-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+
+@media (min-width: 200px) {
+  :root {
+    --height: 22vh;
+    --font-size: 27px;
+    --width: 76vw;
+  }
+  
+}
+
+@media (min-width: 300px) {
+  
+  :root {
+    --height: 17vh;
+    --font-size: 29px;
+    --width: 81vw;
+  }
+
+}
+
+
+@media (min-width: 700px) {
+  :root {
+    --height: 34vh;
+    --font-size: 60px;
+    --width: 76vw;
+  }
+
+}
+
+@media (min-width: 900px) {
+  :root {
+    --font-size: 85px;
+  }
+
+}
+
+@media (min-width: 1000px) {
+  :root {
+    --height: 50vh;
+    --font-size: 40px;
+    --width: 50vw;
+  }
+
+}
