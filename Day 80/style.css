@@ -2,6 +2,7 @@
   --border-radius:16px;
   --height:50vh;
   --font-size:40px;
+  --width:50vw;
 }
 
 * {
@@ -12,7 +13,7 @@
 
 .Stripe-container {
   display: flex;
-  width: 50vw;
+  width: var(--width);
   height: var(--height);
   border-radius: var(--border-radius);
   background-color: black;
