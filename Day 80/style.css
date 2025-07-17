@@ -1,0 +1,99 @@
+:root{
+  --border-radius:16px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  transition: all 0.4s;
+}
+
+.Stripe-container {
+  display: flex;
+  width: 200px;
+  height: 100px;
+  border-radius: var(--border-radius);
+  background-color: black;
+  box-shadow: 0 6px 15px rgb(0, 0, 0, 0.4);
+
+}
+
+.Stripe-container:hover{
+  box-shadow: 0 6px 15px rgb(0, 0, 0, 0.6);
+
+}
+.Stripe-container:hover .before{
+  opacity: 0;
+}
+
+.box {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.text {
+  color: rgb(201, 201, 201);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 550;
+  opacity: 0;
+  font-size: 10px;
+}
+
+.before,
+.after {
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+}
+
+.after {
+  opacity: 0;
+  font-size: 0;
+}
+
+.stripe:hover {
+  width: 180%;
+}
+
+.stripe:hover {
+  .before {
+    opacity: 0;
+    font-size: 0;
+  }
+
+  .after {
+    opacity: 1;
+    font-size: 16px;
+  }
+}
+
+.stripe {
+  height: 100px;
+  width: 20%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.stripe:nth-child(even) {
+  background: #fff;
+
+}
+
+
+.stripe:nth-child(odd) {
+  background: #de5246;
+}
+
+.Stripe-container .stripe:first-child {
+  border-bottom-left-radius: var(--border-radius);
+  border-top-left-radius: var(--border-radius);
+}
+
+.Stripe-container .stripe:last-child {
+  border-bottom-right-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
